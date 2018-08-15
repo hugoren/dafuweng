@@ -1,0 +1,114 @@
+@import '../../pages/game/club.wxss';
+.marquee_wp{
+  margin: 0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.marquee_wp .marquee_item{
+  width: 230rpx;
+  height: 230rpx;
+  margin: 0 10rpx 10rpx 0;
+  opacity: .6;
+  background: #1E9FD9;
+  box-sizing: border-box;
+}
+.marquee_wp .marquee_item.on{
+  opacity: 1.8;
+}
+.marquee_wp .marquee_item image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.marquee_wp .marquee_item:nth-child(3n){
+  margin-right: 0;
+}
+.marquee_wp .marquee_item_btn{
+  background: transparent;
+}
+.marquee_wp .marquee_item_btn text{
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+
+.index-hd {
+  padding: 80rpx;
+  text-align: center;
+  padding: 20rpx 26rpx 40rpx;
+}
+
+.index-desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+/* button{
+  margin-top: 40rpx;
+  width: 400rpx;
+} */
+
+.game-info {
+    margin: 0 20rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+.game-info .score {
+    border: 1px solid #eee;
+    border-radius: 20%;
+    padding: 5rpx 10rpx;
+}
+
+.game-info .money {
+    color: red;
+    position: absolute;
+    right: 4px;
+    opacity: 0;
+    bottom: 0rpx;
+}
+
+.winnerList{
+  /* margin:2% auto 0; */
+  float: left;
+  width:67%;
+  margin-top:261rpx;
+  margin-left:230rpx;
+
+}
+.ourterheight{
+  position:relative;
+  z-index:10;
+  height:31rpx;
+  overflow:hidden;
+  /* background:#f9ecd5; */
+  border: lightpink 1px;
+}
+.winnerList .title{
+    background: #ffc39e;
+    border-radius: 6rpx 6rpx 0 0;
+    padding: 2% 1%;
+    text-align: center;
+    color: #a83700;
+    font-size: 32rpx;
+    border: 2px solid #f9ecd5;
+}
+.winnerList .ulList{
+  position: absolute;
+  width: 94%;
+  left: 3%;
+  z-index: 10;
+}
+.each{height:64rpx;line-height:64rpx;font-size: 28rpx;color: #ffffff;padding:0 3% }
+ .each text:first-child{margin-right: 20rpx}
+/*.each text:nth-child(2){display:inline-block;width: 280rpx}
+.each text:last-child{margin: 0} */
+
+.shuoming{padding-top:10%;padding-left: 6%;font-size: 28rpx;color: #ffc39e}
+.currentScore{position: absolute;top:6rpx;right: 3%;color: #fff;z-index: 20}
+.xin{width: 40rpx;height:40rpx;vertical-align: middle;margin-right: 8rpx}
+.currentScore text{vertical-align: middle;font-size: 30rpx}

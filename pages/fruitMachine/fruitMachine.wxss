@@ -1,0 +1,46 @@
+@import '../../components/fruitMachine/fruitMachine.wxss'
+
+.index-hd {
+  padding: 80rpx;
+  text-align: center;
+  padding: 20rpx 26rpx 40rpx;
+}
+
+.index-desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+button{
+  margin-top: 40rpx;
+  width: 400rpx;
+}
+
+button{
+  margin-top: 40rpx;
+  width: 400rpx;
+}
+
+.game-info {
+    margin: 0 20rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+.game-info .score {
+    border: 1px solid #eee;
+    border-radius: 20%;
+    padding: 5rpx 10rpx;
+}
+
+.game-info .money {
+    color: red;
+    position: absolute;
+    right: 4px;
+    opacity: 0;
+    bottom: 0rpx;
+}

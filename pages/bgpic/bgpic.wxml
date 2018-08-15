@@ -1,0 +1,5 @@
+<!--pages/bgpic/bgpic.wxml-->
+<view style="overflow: scroll;">
+<image src='/assets/bigpic.png'  bindload="imageLoad"
+style="width: {{imagewidth}}px; height: {{imageheight}}px;"></image>
+</view>

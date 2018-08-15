@@ -1,0 +1,124 @@
+<!-- 骰子模版视图 -->
+<template name="first">
+    <view class="first face">
+        <span class="pip"></span>
+    </view>
+</template>
+
+<template name="second">
+    <view class="second face">
+        <span class="pip"></span>
+        <span class="pip"></span>
+    </view>
+</template>
+
+<template name="third">
+    <view class="third face">
+        <span class="pip"></span>
+        <span class="pip third-item-center"></span>
+        <span class="pip"></span>
+    </view>
+</template>
+
+<template name="fourth">
+    <view class="fourth face">
+        <!--按照列排列两个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+        <!--按照列排列另外两个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+
+<template name="fifth">
+    <view class="fifth face">
+        <!--按照列排列两个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+        <!--按照列排列中间一个点-->
+        <view class="column fifth-column-center">
+            <span class="pip"></span> 
+        </view>
+        <!--按照列排列另外两个点--> 
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+
+<template name="sixth">
+    <view class="sixth face">
+        <!--按照列排列三个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view> 
+         <!--按照列排列另外三个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+
+<template name="fruitMachine" >
+  <view class="marquee_wp">
+    <view class="marquee_item {{idx == 1 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 2 ? 'on' : ''}}">
+      <image src = "/assets/marquee_lottery2.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 3 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery3.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 6 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery2.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 5 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery2.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 4 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery3.png"/>
+    </view>
+    
+    <view class="marquee_item {{idx == 7 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 8 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery2.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 9 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>   
+
+    <view class="marquee_item {{idx == 12 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>   
+
+    <view class="marquee_item {{idx == 11 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>   
+
+    <view class="marquee_item {{idx == 10 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>
+  </view>
+</template> 

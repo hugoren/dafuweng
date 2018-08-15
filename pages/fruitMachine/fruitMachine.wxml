@@ -1,0 +1,21 @@
+<import src="../../components/fruitMachine/fruitMachine.wxml" />
+
+<view class="index">
+  <template is = "fruitMachine" data="{{...machine}}"></template> 
+</view>
+<view class="dice-box">
+    <block>
+        <template is="{{dice[num]}}"></template>
+    </block>
+</view>
+<view class="game-info">
+    <div class="name">{{ userInfo.name }}</div>
+    <div>
+        <div class="score">
+            剩余次数：{{ userInfo.score }}
+        </div>
+    </div>
+</view>
+<view class="button-box">
+   <button type="primary" disabled="{{isStart}}"  bindtap = "start">摇一摇</button>
+</view>

@@ -1,0 +1,127 @@
+<!-- <template name="fruitMachine" >
+  <view class="marquee_wp">
+    <view class="marquee_item {{idx == 1 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 2 ? 'on' : ''}}">
+      <image src = "/assets/jump_to_ten.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 3 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery3.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 6 ? 'on' : ''}}" >
+      <image src = "/assets/go_back_three.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 5 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery2.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 4 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery3.png"/>
+    </view>
+    
+    <view class="marquee_item {{idx == 7 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 8 ? 'on' : ''}}" >
+      <image src = "/assets/go_front_two.png"/>
+    </view>
+
+    <view class="marquee_item {{idx == 9 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>   
+
+    <view class="marquee_item {{idx == 12 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>   
+
+    <view class="marquee_item {{idx == 11 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>   
+
+    <view class="marquee_item {{idx == 10 ? 'on' : ''}}" >
+      <image src = "/assets/marquee_lottery1.png"/>
+    </view>
+  </view>
+</template>  -->
+<!--  -->
+<view class="{{isClubShow}}"  style="overflow:scroll;position:absolute;z-index:-1;">
+<image src='/assets/index_bg.jpg'  bindload="imageLoad"
+style="width: {{imagewidth}}px; height: {{imageheight}}px;"></image>
+</view>
+<!--中奖名单  -->
+<view class='winnerList'>
+  <!-- <view class='title'>中奖名单</view> -->
+  <view class='ourterheight'>
+  <view class='ulList' style='position:absolute;top:{{topval}}rpx'>
+    <block wx:for="{{winnerdata}}"> 
+      <view class='each'> 
+         <text>{{item.tel}}</text>
+         <text>{{item.txt}}</text>
+         <!-- <text>{{item.time}}</text> -->
+      </view>
+    </block> 
+  </view>
+  </view>
+</view>
+ <view class="index">
+  <template is = "fruitMachine" data="{{...machine}}"></template> 
+</view>  
+<!-- <view class="game-info">
+    <open-data type="userNickName" lang="zh_CN"></open-data>  
+    <div>
+        <div class="score" style="margin-left:440rpx;">
+            剩余次数：{{ userInfo.score }}
+        </div>
+    </div>
+</view>  -->
+
+<!--按钮-->
+<view class="button-box" style='position: fixed;bottom:0;z-index:9999;'>
+<image src='/assets/buttons.png' 
+style="position: absolute;width:{{screenWidth}}px;height:300rpx;bottom:0;" ></image>
+  <div style="position: relative; margin-bottom:51rpx;">
+  <!--我要骰子 -->
+    <button  class="btn1"  disabled="{{isDisabled}}"  bindtap = "getMyClub"></button>
+    <!--我的奖品-->
+     <button  class="btn2"  disabled="{{isDisabled}}"  bindtap = "myPresent"></button> 
+     <!--摇一摇 -->
+      <button  class="btn3"  disabled="{{isDisabled}}"  bindtap = "showClubView"></button>
+      <text class='shengyutext'>X{{ userInfo.score }}</text>  
+      </div>
+</view>
+<!-- <view style='position: absolute;'>
+<div class="p2"><span>前进至十</span></div>
+<div class="p6"><span>后退三</span></div>
+<div class="p8"><span>前进二</span></div>
+</view> -->
+
+<!--棋子 头像-->
+<view class="bgsquare  {{tipLocation}}"  style="display:{{displaySquare}}">
+ <view class="userinfo">
+ <image src='/assets/toux.png' style="width:109rpx; height:131rpx;position: absolute"></image>
+ <open-data type="userAvatarUrl" background-size="auto" class="userinfo-avatar"></open-data> 
+  </view>
+ </view>
+
+
+<!--棋子 -->
+<view class="bg" bindtap='hideClubView' style='display:{{displayClub}}'>
+<view class="show" bindtap='hideClubView' style='display:{{displayClub}}'> 
+<div class="stage">
+  <div class="club" style="animation:{{animationData}}">
+      <div class="front"></div>
+      <div class="back"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="top"></div>
+      <div class="buttom"></div>
+    </div>
+  </div>
+</view>
+</view>

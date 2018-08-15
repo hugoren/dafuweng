@@ -1,0 +1,401 @@
+/* pages/club/club.wxss */
+.bgsquare{
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: transparent;
+  z-index: 1001;
+  /* -moz-opacity: 0.3; */
+  /* opacity: 0.3; */
+  filter: alpha(opacity=90);
+}
+.userinfo {
+   z-index: 1002;
+    display: flex;
+}
+.userinfo-avatar {
+    width: 91rpx;
+    height: 91rpx;
+    border-radius: 50%;
+    clip-path: circle(50% at center);
+    margin-left:10rpx;
+    margin-top:10rpx;
+}
+.bg {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1001;
+  /* -moz-opacity: 0.8; */
+  /* opacity: 0.80; */
+  filter: alpha(opacity=90);
+}
+
+.show {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  background-color: transparent;
+  z-index: 1002;
+  overflow: auto;
+}
+.stage{
+    width: 100PX;
+    height: 100PX;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -4em;
+    margin-top: -10em;
+}
+.club{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* 设置3D转换 */
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(-20deg);
+    /* 动画执行地方 */
+    animation:a1 3s ease infinite;
+}
+.club div{
+    background-color:rgba(242, 231, 231, 1);
+    width:100px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow:0 0 5em rgba(5, 65, 5, 0.2);
+}
+.clubshow{
+overflow:hidden;
+height:90%;
+}
+.clubhidden{
+overflow:scroll;
+}
+.btn1{
+  background-color:rgba(255, 255, 255, 0.0); 
+  width:187rpx;
+   position: absolute;
+  bottom: 42rpx;
+  margin-left:37px;
+  height:78rpx;
+}
+.btn2{
+  background-color:rgba(255, 255, 255, 0.0);  
+  width:187rpx;
+   position: absolute;
+  bottom: 42rpx;
+  margin-left:306rpx;
+  height:78rpx;
+}
+.btn3{
+  background-color:rgba(255, 255, 255, 0.0); 
+ width:139rpx;
+ height:135rpx;
+ position: absolute;
+  bottom: 42rpx;
+ margin-left:565rpx;
+
+}
+.shengyutext{
+ position: absolute;
+ bottom:142rpx;
+margin-left:630rpx;
+}
+button[disabled]:not([type]) {
+   background-color:rgba(0,0,0,0) !important; 
+}
+
+/* 分别创建骰子的六个面 */
+.front{
+     /* border: 3px solid #2F2F2F; */
+    transform: translateZ(2.7em);
+    background-image: radial-gradient(35px at 50px 50px,#F80000,#BE0000 35px,transparent 36px);
+}
+.back{
+    /* border: 3px solid #2F2F2F; */
+    transform: translateZ(-2.7em);
+    background-image: radial-gradient(11px at 30px 20px,#4C4C4C,#2F2F2F 11px,transparent 12px),
+    radial-gradient(11px at 65px 20px,#4C4C4C,#2F2F2F 11px,transparent 12px),
+    radial-gradient(11px at 30px 50px,#4C4C4C,#2F2F2F 11px,transparent 12px),
+    radial-gradient(11px at 30px 80px,#4C4C4C,#2F2F2F 11px,transparent 12px),
+    radial-gradient(11px at 65px 50px,#4C4C4C,#2F2F2F 11px,transparent 12px),
+    radial-gradient(11px at 65px 80px,#4C4C4C,#2F2F2F 11px,transparent 12px);
+}
+.left{
+    /* border: 3px solid #2F2F2F; */
+    transform: rotateY(-90deg) translateZ(2.7em);
+    background-image: radial-gradient(12px at 25px 25px,#4C4C4C,#2F2F2F 12px,transparent 13px),
+    radial-gradient(12px at 25px 75px,#4C4C4C,#2F2F2F 12px,transparent 13px),
+    radial-gradient(12px at 75px 25px,#4C4C4C,#2F2F2F 12px,transparent 13px),
+    radial-gradient(12px at 50px 50px,#F80000,#BE0000 12px,transparent 13px),
+    radial-gradient(12px at 75px 75px,#4C4C4C,#2F2F2F 12px,transparent 13px);
+}
+.right{
+    /* border: 3px solid #2F2F2F; */
+    transform: rotateY(90deg) translateZ(2.7em);
+    background-image: radial-gradient(17px at 25px 25px,#4C4C4C,#2F2F2F 17px,transparent 18px),
+radial-gradient(17px at 75px 75px,#4C4C4C,#2F2F2F 17px,transparent 18px);
+}
+.top{
+    /* border: 3px solid #2F2F2F; */
+    transform: rotateX(90deg) translateZ(2.7em);
+    background-image: radial-gradient(12px at 25px 25px,#4C4C4C,#2F2F2F 12px,transparent 13px),
+radial-gradient(12px at 50px 50px,#4C4C4C,#2F2F2F 12px,transparent 13px),
+radial-gradient(12px at 75px 75px,#4C4C4C,#2F2F2F 12px,transparent 13px);
+}
+.buttom{
+    /* border: 3px solid #2F2F2F; */
+    transform: rotateX(-90deg) translateZ(2.7em);
+    background-image: radial-gradient(12px at 25px 25px,#4C4C4C,#2F2F2F 12px,transparent 13px),
+    radial-gradient(12px at 25px 75px,#4C4C4C,#2F2F2F 12px,transparent 13px),
+    radial-gradient(12px at 75px 25px,#4C4C4C,#2F2F2F 12px,transparent 13px),
+radial-gradient(12px at 75px 75px,#4C4C4C,#2F2F2F 12px,transparent 13px);
+}
+/* 创建动画 */
+/*数字1**/
+@keyframes a1 {
+    from{
+        transform: rotateX(0deg) rotateY(0) ;
+    }
+    to{
+        /* transform: rotateX(180deg) rotateY(180deg) ; */
+        transform: rotateX(540deg) rotateY(540deg) ;
+    }
+}
+/*数字2**/
+@keyframes a2 {
+    from{
+        transform: rotateX(0deg) rotateY(0) ;
+    }
+    to{
+        /* transform: rotateX(180deg) rotateY(90deg) ; */
+        transform: rotateX(540deg) rotateY(450deg) ;
+    }
+}
+/*数字3**/
+@keyframes a3 {
+    from{
+        transform: rotateX(0deg) rotateY(0) ;
+    }
+    to{
+        /* transform: rotateX(270deg) rotateY(180deg) ; */
+        transform: rotateX(630deg) rotateY(450deg) ;
+    }
+}
+/*数字4**/
+@keyframes a4 {
+    from{
+        transform: rotateX(0deg) rotateY(0) ;
+    }
+    to{
+        /* transform: rotateX(90deg) rotateY(180deg) ; */
+        transform: rotateX(450deg) rotateY(450deg) ;
+    }
+}
+/*数字5**/
+@keyframes a5 {
+    from{
+        transform: rotateX(0deg) rotateY(0) ;
+    }
+    to{
+        /* transform: rotateX(180deg) rotateY(270deg) ; */
+        transform: rotateX(540deg) rotateY(630deg) ;
+    }
+}
+/*数字6**/
+@keyframes a6 {
+    from{
+        transform: rotateX(0deg) rotateY(0) ;
+    }
+    to{
+        /* transform: rotateX(180deg) rotateY(360deg) ; */
+        transform: rotateX(540deg) rotateY(720deg) ;
+    }
+}
+
+/********棋格子的坐标位置***********/
+.p0{
+  top:290rpx;
+  left:30rpx;
+}
+.p1{
+  top:200rpx;
+  left:160rpx;
+}
+.p2{
+  top:200rpx;
+  left:270rpx;
+}
+.p3{
+ top:200rpx;
+ left:385rpx;
+}
+.p4{
+  top:200rpx;
+ left:500rpx;
+}
+.p5{
+  top:300rpx;
+  left:610rpx;
+}
+.p6{
+  top:320rpx;
+  left:500rpx;
+}
+.p7{
+  top:320rpx;
+  left:385rpx;
+}
+.p8{
+  top:320rpx;
+  left:270rpx;
+}
+.p9{
+  top:320rpx;
+  left:160rpx;
+}
+.p10{
+  top:400rpx;
+  left:55rpx;
+}
+.p11{
+  top:440rpx;
+  left:160rpx;
+}
+.p12{
+  top:440rpx;
+  left:270rpx;
+}
+.p13{
+  top:530rpx;
+  left:385rpx;
+}
+.p14{
+  top:560rpx;
+  left:270rpx;
+}
+.p15{
+  top:560rpx;
+  left:160rpx;
+}
+.p16{
+  top:660rpx;
+  left:55rpx;
+}
+.p17{
+  top:690rpx;
+  left:164rpx;
+}
+.p18{
+  top:690rpx;
+  left:275rpx;
+}
+.p19{
+  top:690rpx;
+  left:387rpx;
+}
+.p20{
+  top:690rpx;
+  left:500rpx;
+}
+.p21{
+  top:750rpx;
+  left:610rpx;
+}
+.p22{
+  top:810rpx;
+  left:500rpx;
+}
+.p23{
+  top:810rpx;
+  left:385rpx;
+}
+.p24{
+  top:875rpx;
+  left:275rpx;
+}
+.p25{
+  top:940rpx;
+  left:385rpx;
+}
+.p26{
+  top:940rpx;
+  left:495rpx;
+}
+.p27{
+  top:1000rpx;
+  left:610rpx;
+}
+.p28{
+  top:1062rpx;
+  left:496rpx;
+}
+.p29{
+  top:1062rpx;
+  left:385rpx;
+}
+.p30{
+  top:1062rpx;
+  left:275rpx;
+}
+.p31{
+  top:1062rpx;
+  left:162rpx;
+}
+.p32{
+  top:1105rpx;
+  left:55rpx;
+}
+.p33{
+  top:1180rpx;
+  left:162rpx;
+}
+.p34{
+  top:1180rpx;
+  left:275rpx;
+}
+.p35{
+  top:1180rpx;
+  left:390rpx;
+}
+.p36{
+  top:1240rpx;
+  left:497rpx;
+}
+.p37{
+  top:1314rpx;
+  left:388rpx;
+}
+.p38{
+  top:1314rpx;
+  left:270rpx;
+}
+.p39{
+  top:1367rpx;
+  left:164rpx;
+}
+.p40{
+  top:1430rpx;
+  left:273rpx
+}
+.p41{
+  top:1430rpx;
+  left:390rpx;
+}
+.p42{
+  top:1430rpx;
+  left:520rpx
+}
+button::after{
+  border: none;
+}
+

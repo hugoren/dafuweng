@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <open-data type="userAvatarUrl" background-size="cover" class="userinfo-avatar" ></open-data>
+    <open-data type="userNickName" class="userinfo-nickname" ></open-data>
+  </view>
+  <view class="mt300">
+    <button type="primary" bindtap="goToGame" class="w600">
+          开始游戏 
+    </button> 
+  <!--
+    
+  
+    <button bindtap="goToGame" class="mt60 w600 orange-btn" hover-class="orange-hover">
+        开始游戏 
+    </button>
+   -->
+  </view>
+</view>
